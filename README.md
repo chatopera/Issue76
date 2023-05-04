@@ -119,3 +119,38 @@ node chat.js
 
 
 结论：现在行为无法得到 `this.message.extras`；预期行为可以得到请求接口时传递的 extras 信息。
+
+
+## 修正
+
+已经对该问题验证测试通过，发布到生产环境。测试过程如下：
+
+* 如前，建立机器人，训练意图，发送请求
+
+请求脚本详见：[chat.js](./chat.js)
+
+主要部分：
+
+```
+    resp = await bot.command("POST", "/conversation/query", {
+        fromUserId: "zhangsan",
+        textMessage: "我想打车",
+        faqBestReplyThreshold: 0.6,
+        faqSuggReplyThreshold: 0,
+        extras: {
+            foo: "bar"
+        }
+    })
+```
+
+
+* 在多轮对话设计器的日志中，得到打印结果
+
+![screenshot_20230504203347](https://user-images.githubusercontent.com/3538629/236205619-cd5e4af1-e1a4-4dfa-aad0-dc23e3e45258.png)
+
+
+## 针对生产环境的验证
+
+对已有的机器人，需要：1）重新在意图识别处点击【保存】，加载模型；2）在多轮对话设计器，重新保存脚本。
+
+![screenshot_20230504203820](https://user-images.githubusercontent.com/3538629/236206638-16cd73df-183b-4c58-ac60-520a31bfc5d0.png)
