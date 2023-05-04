@@ -43,6 +43,20 @@ async function main() {
         }
     })
 
+    console.log("普通函数：查看信息")
+    console.log(JSON.stringify(resp, null, 2))
+
+    resp = await bot.command("POST", "/conversation/query", {
+        fromUserId: "zhangsan",
+        textMessage: "我想打车",
+        faqBestReplyThreshold: 0.6,
+        faqSuggReplyThreshold: 0,
+        extras: {
+            foo: "bar"
+        }
+    })
+
+    console.log("意图匹配器：函数打印 extras，在多轮对话设计器中查看")
     console.log(JSON.stringify(resp, null, 2))
 }
 
