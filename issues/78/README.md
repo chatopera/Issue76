@@ -85,6 +85,11 @@ bot faq -a train # TODO 待支持
 bot intents -a train
 ```
 
+训练完成后提示：
+
+![screenshot_20230510135418](https://github.com/chatopera/docs/assets/3538629/8cf36039-2e28-4240-aced-799ae6ef6d59)
+
+
 * 使用机器人平台控制台
 
 在浏览器内，打开机器人，进入知识库或意图识别页面，可以看到提示同步的按钮。

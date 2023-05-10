@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@chatopera/sdk": "^2.8.13"
+  }
+}
