@@ -1,10 +1,13 @@
 # Chatopera SDK Supports Dict Management
 
+Re produce and track issue, [https://github.com/chatopera/docs/issues/78](https://github.com/chatopera/docs/issues/78).
+
+
+## CLI and Dicts
 
 * CLI 安装：[https://docs.chatopera.com/products/chatbot-platform/howto-guides/integration/cli-install-config.html](https://docs.chatopera.com/products/chatbot-platform/howto-guides/integration/cli-install-config.html)
 * CLI 命令说明：[https://docs.chatopera.com/products/chatbot-platform/references/cli.html](https://docs.chatopera.com/products/chatbot-platform/references/cli.html)
 
-## CLI and Dicts
 
 ### 导出词典
 
