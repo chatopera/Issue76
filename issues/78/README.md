@@ -80,7 +80,7 @@ bot dicts -a import -f bot.dicts.json
 
 ```
 # 训练知识库
-bot faq -a train # TODO 待支持
+bot faq -a train
 # 训练意图识别
 bot intents -a train
 ```
